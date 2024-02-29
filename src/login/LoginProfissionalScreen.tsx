@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 
-function LoginClientesScreen():JSX.Element {
+function LoginProfissionalScreen():JSX.Element {
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -86,17 +86,17 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'white'
+        backgroundColor:'blue light'
     },
 
     logo: {
       width: 80,
       height: 80,
       marginBottom: 40,
-      marginTop: -100
+      marginTop: -100,
     },
     card: {
-        backgroundColor: "black",
+        backgroundColor: "white",
         width: 300,
         borderRadius: 30,
         padding: 20,
@@ -112,7 +112,10 @@ const styles = StyleSheet.create({
         height: 70,
         marginBottom: 0,
         marginTop: 10,
-        alignItems:'center'
+        alignItems:'center',
+        borderRadius: 17,
+        borderWidth: 1,
+        borderColor: 'white'
         
         
         
@@ -122,7 +125,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 19,
         fontWeight: 'bold',
-        color: "white",
+        color: "black",
         marginBottom: 20,
         textAlign: 'center',
 
@@ -163,4 +166,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default LoginClientesScreen;
+export default LoginProfissionalScreen;

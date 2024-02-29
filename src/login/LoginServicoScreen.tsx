@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 
-function LoginClientesScreen():JSX.Element {
+function LoginServicoScreen():JSX.Element {
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -30,7 +30,7 @@ function LoginClientesScreen():JSX.Element {
             
 
             <View style={styles.card}>
-                <Text style={styles.title}>Login Profissional</Text>
+                <Text style={styles.title}>Login Serviço</Text>
                 <TextInput 
                  style={styles.input}
                 placeholder="Nome"
@@ -163,4 +163,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default LoginClientesScreen;
+export default LoginServicoScreen;

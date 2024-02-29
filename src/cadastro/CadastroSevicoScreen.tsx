@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 
-function LoginClientesScreen():JSX.Element {
+function CadastroServicoScreen():JSX.Element {
 
     const [nome, setNome] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-   
+    const [descricao, setDescricao] = useState("");
+    const [duracao, setDuracao] = useState("");
+    const [preco, setPreco] = useState("");
+    
     
 
     function login(){
         const dados = {
-            email: email,
-            password: password
+            nome: nome,
+            descricao: descricao,
+            duracao: duracao,
+            preco: preco,
+            
         }
 
         console.log(dados);
@@ -30,7 +34,7 @@ function LoginClientesScreen():JSX.Element {
             
 
             <View style={styles.card}>
-                <Text style={styles.title}>Login Profissional</Text>
+                <Text style={styles.title}>Cadastro de Serviço</Text>
                 <TextInput 
                  style={styles.input}
                 placeholder="Nome"
@@ -39,32 +43,32 @@ function LoginClientesScreen():JSX.Element {
                 />
                 <TextInput 
                  style={styles.input}
-                placeholder="E-mail"
+                placeholder="Descrição"
                 placeholderTextColor="#151413"
-                onChangeText={(textEmail) => setEmail(textEmail)}
+                onChangeText={(textDescricao) => setDescricao(textDescricao)}
                 />
 
                 <TextInput 
-                style={styles.input}
-                placeholder="Senha"
+                 style={styles.input}
+                placeholder="Duração"
                 placeholderTextColor="#151413"
-                onChangeText={(textPassword) => setPassword(textPassword)}
-                secureTextEntry
+                onChangeText={(textDuracao) => setDuracao(textDuracao)}
                 />
+
+                <TextInput 
+                 style={styles.input}
+                placeholder="Data de Nascimento"
+                placeholderTextColor="#151413"
+                onChangeText={(textPreco) => setPreco(textPreco)}
+                />
+
+            
                 
                 <TouchableOpacity 
                 style={styles.button}
                  onPress={() =>{login() }}>
                     <Text style={styles.buttonText}>Entrar</Text>
                 </TouchableOpacity>
-
-               <TouchableOpacity>
-                <Text style={styles.forgotPassword}>Não possui conta? Cadastre-se!</Text>
-               </TouchableOpacity>
-
-               <TouchableOpacity >
-                <Text style={styles.forgotPassword}>Esqueceu a senha</Text>
-               </TouchableOpacity>
 
 
             </View>
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'white'
+        backgroundColor:'pink'
     },
 
     logo: {
@@ -134,7 +138,7 @@ const styles = StyleSheet.create({
      paddingHorizontal: 10,
      borderRadius: 8,
      borderWidth: 1,
-     borderColor: 'white'
+     borderColor: 'pink'
     },
     button:{
         backgroundColor: 'white',
@@ -163,4 +167,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default LoginClientesScreen;
+export default CadastroServicoScreen;
